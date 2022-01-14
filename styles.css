@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  background: #fff;
+  color: #161616;
+}
+
+body,
+input,
+textarea,
+button {
+  font: 400 1rem "Sora", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("./img/jinx.jpg");
+  background-repeat: no-repeat;
+}
+
+nav {
+  width: 100vw;
+  position: fixed;
+  top: 0%;
+
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+nav .img-riot {
+  width: 100px;
+  padding-right: 2rem;
+  border-right: 2px solid #fff;
+}
+
+nav .img-lol {
+  margin-left: 2rem;
+  width: 40px;
+}
+
+nav .img-netflix {
+  width: 150px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 10rem;
+}
+
+.btn-trailer {
+  border: none;
+  padding: 1rem 3rem;
+
+  --initialBgColor: #e3d2bc;
+  --slideBgColor: #1b3163;
+
+  background-image: linear-gradient(
+    90deg,
+    var(--initialBgColor) 0%,
+    var(--initialBgColor) 50%,
+    var(--slideBgColor) 50%,
+    var(--slideBgColor) 100%
+  );
+  -webkit-transition: background-position 1s;
+  -moz-transition: background-position 1s;
+  background-size: 200%;
+  transition: background-position 0.5s cubic-bezier(0.47, 0.1, 1, 0.63),
+    color 1s linear;
+
+  font-size: 1.5rem;
+
+  clip-path: polygon(
+    100.29% 2px,
+    100.6% 99.21%,
+    50% 100%,
+    0.23% 101.42%,
+    0px 29.37%,
+    5.92% 1.95%
+  );
+  box-sizing: border-box;
+  border: 2px solid #111111;
+}
+
+.btn-trailer:hover {
+  background-position: 100% -100%;
+  color: #fff;
+}
+
+.light-bg {
+  bottom: 0;
+  right: 0;
+  height: 111px;
+  width: 80%;
+  position: fixed;
+
+  background-color: #e3d2bc7c;
+
+  clip-path: ellipse(793px 400px at 69.68% 56.04%);
+}
+
+.footer {
+  bottom: 0;
+  left: -0%;
+  position: absolute;
+  height: 200px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  margin-right: 2rem;
+  margin-bottom: 3rem;
+  z-index: 1;
+}
+
+.episode {
+  width: 724px;
+  height: 187px;
+
+  position: relative;
+  background-color: #e3d2bc;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  clip-path: polygon(
+    100.29% 2px,
+    100.6% 99.21%,
+    50% 100%,
+    -13.31% 101.42%,
+    -131px 10.65%,
+    -0.94% 10.62%,
+    3.16% -0.72%
+  );
+}
+
+.episode img {
+  margin-left: -25%;
+}
+
+.episode p {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.episode p strong {
+  font-size: 2rem;
+}
+
+.episode p span {
+  color: #585858;
+}
